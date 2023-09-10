@@ -2,9 +2,12 @@
   "name": "nvim-edit",
   "displayName": "Neovim edit",
   "description": "Opens current file in NeoVim terminal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.82.0"
+  },
+  "repository": {
+    "url": "https://github.com/psqq/vscode-neovim-edit"
   },
   "categories": [
     "Other"
@@ -12,12 +15,7 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "norg.helloWorld",
-        "title": "Hello World"
-      }
-    ]
+    "commands": []
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
