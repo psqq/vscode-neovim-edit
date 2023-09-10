@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-	let disposable = vscode.commands.registerCommand('norg.helloWorld', () => {
+	let disposable = vscode.commands.registerCommand('nvim-edit.edit-file', () => {
 		const filename = vscode.window.activeTextEditor?.document.fileName;
 		if (!filename) {
 			vscode.window.showInformationMessage('No filename for open');
