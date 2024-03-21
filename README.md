@@ -1,6 +1,10 @@
-# NeoVim edit
+# Neovim edit
 
-Does two simple things (`Edit file in Neovim` command):
+Command Pallette: `Edit file in Neovim`
 
-* Create new terminal
-* Enters into the terminal: `nvim filename`
+Keybinding: `nvim-edit.edit-file`
+
+### Does two simple things:
+
+1. Creates a new terminal
+2. Enters into the terminal `nvim filename`
