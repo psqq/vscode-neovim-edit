@@ -2,7 +2,7 @@
   "name": "nvim-edit",
   "displayName": "Neovim edit",
   "description": "Opens current file in NeoVim terminal",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.82.0"
   },
@@ -21,7 +21,25 @@
         "command": "nvim-edit.edit-file",
         "title": "Edit file in Neovim"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Neovim edit",
+      "properties": {
+        "nvim-edit.terminalSendTextValue": {
+          "type": "string",
+          "default": "nvim +'call cursor(${cursor.line+1},${cursor.character+1})' ${utils.escapeShell(filename)}; exit",
+          "description": "Text that will be sent to the terminal to launch Neovim (the string will be parsed as a Javascript template string!)"
+        },
+        "nvim-edit.terminalLocation": {
+          "type": "string",
+          "default": "Editor",
+          "description": "Default location for terminal",
+          "enum": [
+            "Editor", "Panel"
+          ]
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
