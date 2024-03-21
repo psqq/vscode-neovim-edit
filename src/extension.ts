@@ -14,7 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
 			hideFromUser: false
 		});
 		terminal.show();
-		terminal.sendText(`nvim +'call cursor(${cursor.line+1},${cursor.character+1})' ${filename}`);
+		terminal.sendText(`nvim +'call cursor(${cursor.line+1},${cursor.character+1})' ${filename}; exit`);
 	});
 
 	context.subscriptions.push(disposable);
