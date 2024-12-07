@@ -2,7 +2,7 @@
   "name": "nvim-edit",
   "displayName": "Neovim edit",
   "description": "Opens current file in NeoVim terminal",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.82.0"
   },
@@ -37,6 +37,16 @@
           "enum": [
             "Editor", "Panel"
           ]
+        },
+        "nvim-edit.terminalName": {
+          "type": "string",
+          "default": "nvim ${filename}",
+          "description": "The name of the terminal to which the command to open Neovim will be sent."
+        },
+        "nvim-edit.alwaysCreateNewTerminal": {
+          "type": "boolean",
+          "default": true,
+          "description": "If `true`, then a new terminal will always be created. Otherwise, if a terminal with the given name already exists, then that terminal will be used."
         }
       }
     }

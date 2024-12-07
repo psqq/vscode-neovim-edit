@@ -4,10 +4,10 @@ Command Pallette: `Edit file in Neovim`
 
 Keybinding: `nvim-edit.edit-file`
 
-### Does two simple things:
+## Does two simple things
 
 1. Creates a new terminal
-2. Enters into the terminal `nvim filename`
+2. Enters a specific command into the terminal to open a file in Neovim
 
 # Configuration
 
@@ -30,3 +30,21 @@ Keybinding: `nvim-edit.edit-file`
 *Default value:* Editor
 
 *Enum:* Editor, Panel
+
+## nvim-edit.terminalName
+
+*Description:* Terminal name
+
+*Default value:* `name ${filename}`
+
+## nvim-edit.alwaysCreateNewTerminal
+
+*Description:* If `true`, a new terminal will always be created. Otherwise, a new terminal will only be created if there is no terminal with the name being created.
+
+*Default value:* `true`
+
+# Changelog
+
+* 0.1.0
+  * Added `terminalName` and `alwaysCreateNewTerminal` options
+  * These options have been added to eliminate possible delays associated with creating a new terminal.
