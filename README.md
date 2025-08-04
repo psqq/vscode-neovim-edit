@@ -35,7 +35,7 @@ Keybinding: `nvim-edit.edit-file`
 
 *Description:* Terminal name
 
-*Default value:* `name ${filename}`
+*Default value:* `nvim ${filename}`
 
 ## nvim-edit.alwaysCreateNewTerminal
 
